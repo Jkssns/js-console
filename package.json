@@ -1,0 +1,59 @@
+{
+  "name": "js-log",
+  "displayName": "js-log",
+  "description": "js-log",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:js-log.toast",
+    "onCommand:js-log.qlog"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "js-log.toast",
+        "title": "toast"
+      },
+      {
+        "command": "js-log.qlog",
+        "title": "qlog"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "js-log.toast",
+        "key": "ctrl+shift+1",
+        "mac": "ctrl+shift+1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "js-log.qlog",
+        "key": "ctrl+1",
+        "mac": "ctrl+1",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.73.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.8.4",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
