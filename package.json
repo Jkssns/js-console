@@ -1,8 +1,9 @@
 {
   "name": "js-log",
   "displayName": "js-log",
-  "description": "js-log",
+  "description": "快速极致的js log",
   "version": "0.0.1",
+  "publisher": "Jkssns",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -15,6 +16,44 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "js-log",
+      "properties": {
+        "js-log.VariablePilotSymbol": {
+          "type": "string",
+          "default": ":::",
+          "markdownDescription": "console.log(\"obj`::: `\", obj);"
+        },
+        "js-log.ShowLogSemicolon": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否显示结尾的分号(Show ; or not)"
+        },
+        "js-log.QuotationMark": {
+          "type": "string",
+          "enum": ["single", "double"],
+          "default": "single",
+          "enumDescriptions": [
+            "console.log('')",
+            "console.log(\"\")"
+          ]
+        },
+        "js-log.ShowLineTag": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否显示log的行(Whether to display the line of log)"
+        },
+        "js-log.LineTagAtBeginOrEnd": {
+          "type": "string",
+          "enum": ["begin", "end"],
+          "default": "begin",
+          "enumDescriptions": [
+            "Looks like console.log(\"line:1 obj\", obj)",
+            "Looks like console.log(\"obj\", obj, \"line:1\")"
+          ]
+        }
+      }
+    },
     "commands": [
       {
         "command": "js-log.toast",

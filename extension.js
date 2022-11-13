@@ -10,6 +10,10 @@ const vscode = require('vscode');
  */
 function activate(context) {
 
+
+	const tag = vscode.workspace.getConfiguration('myExtension');
+	console.log(tag, 'tag')
+
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "js-log" is now active!');
@@ -21,9 +25,8 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 
 		// Display a message box to the user
-		vscode.window.showInformationMessage('今天也要为我司鞠躬尽瘁哦!');
+		vscode.window.showInformationMessage('今天也要为公司鞠躬尽瘁哦!');
 	});
-
 
 
 	const qlog = vscode.commands.registerTextEditorCommand('js-log.qlog', function () {
@@ -31,20 +34,40 @@ function activate(context) {
 
 		if (editor) {
 			const document = editor.document;
-			const selection = editor.selection;
+			const varSelection = editor.selection;
+			const word = document.getText(varSelection);
 
-			// Get the word within the selection
-			const word = document.getText(selection);
-			const reversed = '\n' + '1'
-			console.log(selection, 'selection')
-			editor.edit(editBuilder => {
-				const log = `console.log('line${selection.end.line + 2} ${word}:::', ${word})`
-				editBuilder.insert(selection.end, '\r\n' + log);
+			vscode.commands.executeCommand('editor.action.insertLineAfter').then(res => {
+				const logOption = vscode.workspace.getConfiguration('js-log');
+				const insertSection = editor.selection;
+				const variablePilotSymbol = logOption.VariablePilotSymbol || ':::';
 
-			});
+				editor.edit((editBuilder) => {
+					const quotationMark = logOption.QuotationMark === 'single' ? `'` : `"`;
+					const lineStr = logOption.ShowLineTag ? 'line:' + (insertSection.end.line + 1) : '';
+					const logEnd = logOption.ShowLogSemicolon ? ");" : ")";
+
+					if (!word) {
+						const value = new vscode.SnippetString(`console.log(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, $1${logEnd}`);
+						editor.insertSnippet(value, insertSection.start);
+						return;
+					}
+
+					if (lineStr) {
+						const isBegin = logOption.LineTagAtBeginOrEnd === 'begin';
+						if (isBegin) {
+							editBuilder.insert(insertSection.start, `console.log(${quotationMark + lineStr} ${word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
+						} else {
+							editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word}, ${quotationMark + lineStr + quotationMark + logEnd}`);
+						}
+					} else {
+						editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
+					}
+				});
+			})
+
 		}
 	});
-
 
 	context.subscriptions.push(toast);
 	context.subscriptions.push(qlog);

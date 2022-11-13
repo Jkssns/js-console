@@ -1,65 +1,29 @@
-# js-log README
+# js-log (English description translated from Baidu)
 
-This is the README for your extension "js-log". After writing up a brief description, we recommend including the following sections.
+功能为快速`console.log`，节省打错或频繁打log的时间。
+<br>
+The function is fast 'console. log', which saves the time of wrong or frequent logging.
 
-## Features
+<br>
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 功能 Features
+功能如gif所示，选中变量按Ctrl+1，快速打一个console.log();
 
-For example if there is an image subfolder under your extension project workspace:
+The function is shown in gif. Select a variable and press Ctrl+1 to quickly input a console.log();
 
-\!\[feature X\]\(images/feature-x.png\)
+![Github上的图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log.gif](https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 扩展设置 Extension Settings
+|  Zh   | En  | 默认 Default 
+|  ----  | ----  | ----  | 
+| 更改变量引导符  | Change the variable guidance | `:::`
+| 更改单引号双引号  | Change the single quotation number dual quotation | '
+结尾要不要分号|Semicolon at the end or not| 显示 <br> Show
+是否显示行数，行数显示在左边还是右边|Whether to display the number of lines, whether to display the number of lines on the left or right | 显示在右边 <br> Show on the right
 
-## Requirements
+![Github上的图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log_setting.gif](https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log_setting.gif)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+> 以后加实用性不大的颜色背景 
+<br>
+Add less practical color background in the future
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
