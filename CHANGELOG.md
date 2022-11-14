@@ -1,9 +1,8 @@
 # Change Log
 
-All notable changes to the "js-log" extension will be documented in this file.
+- 1.0.1 兼容vscode低版本
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- 1.0.0 发布js-log
 
-## [Unreleased]
 
-- Initial release
+

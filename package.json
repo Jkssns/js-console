@@ -2,10 +2,13 @@
   "name": "js-log",
   "displayName": "js-log",
   "description": "快速极致的js log",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "publisher": "Jkssns",
+  "repository": "https://github.com/Jkssns/js-log",
+  "issues": "https://github.com/Jkssns/js-log/issues",
+  "icon": "logo.png",
   "engines": {
-    "vscode": "^1.73.0"
+    "vscode": ">=1.2.0"
   },
   "categories": [
     "Other"
