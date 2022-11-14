@@ -1,6 +1,6 @@
 {
-  "name": "js-log",
-  "displayName": "js-log",
+  "name": "jslog",
+  "displayName": "js console.log",
   "description": "快速极致的js log",
   "version": "1.0.1",
   "publisher": "Jkssns",
@@ -34,7 +34,10 @@
         },
         "js-log.QuotationMark": {
           "type": "string",
-          "enum": ["single", "double"],
+          "enum": [
+            "single",
+            "double"
+          ],
           "default": "single",
           "enumDescriptions": [
             "console.log('')",
@@ -48,7 +51,10 @@
         },
         "js-log.LineTagAtBeginOrEnd": {
           "type": "string",
-          "enum": ["begin", "end"],
+          "enum": [
+            "begin",
+            "end"
+          ],
           "default": "begin",
           "enumDescriptions": [
             "Looks like console.log(\"line:1 obj\", obj)",
@@ -88,7 +94,7 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.73.0",
+    "@types/vscode": "^1.2.0",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "16.x",
