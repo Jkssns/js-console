@@ -1,8 +1,8 @@
 {
-  "name": "jslog",
+  "name": "js-console",
   "displayName": "js console.log",
   "description": "快速极致的js log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "Jkssns",
   "repository": "https://github.com/Jkssns/js-log",
   "issues": "https://github.com/Jkssns/js-log/issues",
@@ -14,25 +14,26 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:js-log.toast",
-    "onCommand:js-log.qlog"
+    "onCommand:js-console.toast",
+    "onCommand:js-console.qlog",
+    "onCommand:js-console.jsonLog"
   ],
   "main": "./extension.js",
   "contributes": {
     "configuration": {
-      "title": "js-log",
+      "title": "js-console",
       "properties": {
-        "js-log.VariablePilotSymbol": {
+        "js-console.VariablePilotSymbol": {
           "type": "string",
           "default": ":::",
           "markdownDescription": "console.log(\"obj`::: `\", obj);"
         },
-        "js-log.ShowLogSemicolon": {
+        "js-console.ShowLogSemicolon": {
           "type": "boolean",
           "default": true,
           "description": "是否显示结尾的分号(Show ; or not)"
         },
-        "js-log.QuotationMark": {
+        "js-console.QuotationMark": {
           "type": "string",
           "enum": [
             "single",
@@ -44,12 +45,12 @@
             "console.log(\"\")"
           ]
         },
-        "js-log.ShowLineTag": {
+        "js-console.ShowLineTag": {
           "type": "boolean",
           "default": false,
           "description": "是否显示log的行(Whether to display the line of log)"
         },
-        "js-log.LineTagAtBeginOrEnd": {
+        "js-console.LineTagAtBeginOrEnd": {
           "type": "string",
           "enum": [
             "begin",
@@ -65,23 +66,47 @@
     },
     "commands": [
       {
-        "command": "js-log.toast",
-        "title": "toast"
+        "command": "js-console.toast",
+        "title": "Message from js console.log"
       },
       {
-        "command": "js-log.qlog",
-        "title": "qlog"
+        "command": "js-console.qlog",
+        "title": "Log"
+      },
+      {
+        "command": "js-console.jsonLog",
+        "title": "Log for JSON"
       }
     ],
+    "menus": {
+      "editor/context": [
+          {
+            "when": "!editorReadonly",
+            "command": "js-console.qlog",
+            "group": "navigation"
+          },
+          {
+            "when": "!editorReadonly",
+            "command": "js-console.jsonLog",
+            "group": "navigation"
+          }
+      ]
+    },
     "keybindings": [
       {
-        "command": "js-log.toast",
-        "key": "ctrl+shift+1",
-        "mac": "ctrl+shift+1",
+        "command": "js-console.toast",
+        "key": "ctrl+3",
+        "mac": "ctrl+3",
+        "when": "isWindows || !isWindows"
+      },
+      {
+        "command": "js-console.jsonLog",
+        "key": "ctrl+2",
+        "mac": "ctrl+2",
         "when": "editorTextFocus"
       },
       {
-        "command": "js-log.qlog",
+        "command": "js-console.qlog",
         "key": "ctrl+1",
         "mac": "ctrl+1",
         "when": "editorTextFocus"
@@ -103,5 +128,8 @@
     "mocha": "^10.1.0",
     "typescript": "^4.8.4",
     "@vscode/test-electron": "^2.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.1.3"
   }
 }
