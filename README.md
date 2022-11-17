@@ -4,11 +4,11 @@
 	<br>
 	The function is fast `console.log()`, which saves the time of wrong or frequent logging.
 </p>
-
+<br>
 <br>
 
 ## 功能 Features
-
+<br>
 <br>
 
 ### 快捷键(Ctrl+1)
@@ -18,7 +18,7 @@
 	The function is shown in gif. Select a variable and press Ctrl+1 to quickly input a `console.log();`
 </p>
 <img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-log.gif" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log.gif">
-
+<br>
 <br>
 
 ### 快捷键(Ctrl+2)
@@ -42,7 +42,7 @@
 	<br>
 	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/copylog.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/copylog.png">
 </p>
-
+<br>
 <br>
 
 ### 快捷键(Ctrl+3)
@@ -51,7 +51,7 @@
 	<br>
 	Randomly prompt a motivational message to help you work efficiently in the day!
 </p>
-
+<br>
 <br>
 
 ## 插件/扩展设置 Extension Settings
@@ -63,9 +63,10 @@
 | 结尾要不要分号 | Semicolon at the end or not | `true` |
 | 是否显示行数，行数显示在开始还是结束 | Whether to display the number of lines, whether to display the number of lines on the begin or end | `true/begin` |
 | 启动时是否显示激励语 | Show encourage message or not on startup | `true` |
+<br>
 
 <img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-console-setting.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-console-setting.png">
-
+<br>
 <br>
 
 ## 以后 Future
