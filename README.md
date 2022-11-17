@@ -64,8 +64,7 @@
 | 是否显示行数，行数显示在开始还是结束 | Whether to display the number of lines, whether to display the number of lines on the begin or end | `true/begin` |
 | 启动时是否显示激励语 | Show encourage message or not on startup | `true` |
 
-<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-console-setting.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log_setting.gif">
-
+<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-console-setting.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-console-setting.png">
 
 <br>
 
