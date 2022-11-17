@@ -15,9 +15,9 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:js-console.toast",
     "onCommand:js-console.qlog",
-    "onCommand:js-console.jsonLog"
+    "onCommand:js-console.jsonLog",
+    "onCommand:js-console.toast"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -41,6 +41,7 @@
             "double"
           ],
           "default": "single",
+          "description": "log用单引号或双引号(' or \" for log)",
           "enumDescriptions": [
             "console.log('')",
             "console.log(\"\")"
@@ -58,6 +59,7 @@
             "end"
           ],
           "default": "begin",
+          "description": "行标识显示在开始或结束(Line tag is displayed at the beginning or end)",
           "enumDescriptions": [
             "Looks like console.log(\"line:1 obj\", obj)",
             "Looks like console.log(\"obj\", obj, \"line:1\")"
@@ -72,16 +74,16 @@
     },
     "commands": [
       {
-        "command": "js-console.toast",
-        "title": "Message from js console.log"
-      },
-      {
         "command": "js-console.qlog",
         "title": "Log"
       },
       {
         "command": "js-console.jsonLog",
         "title": "Log for JSON"
+      },
+      {
+        "command": "js-console.toast",
+        "title": "Message from js console.log"
       }
     ],
     "menus": {
@@ -100,10 +102,10 @@
     },
     "keybindings": [
       {
-        "command": "js-console.toast",
-        "key": "ctrl+3",
-        "mac": "ctrl+3",
-        "when": "isWindows || !isWindows"
+        "command": "js-console.qlog",
+        "key": "ctrl+1",
+        "mac": "ctrl+1",
+        "when": "editorTextFocus"
       },
       {
         "command": "js-console.jsonLog",
@@ -112,10 +114,10 @@
         "when": "editorTextFocus"
       },
       {
-        "command": "js-console.qlog",
-        "key": "ctrl+1",
-        "mac": "ctrl+1",
-        "when": "editorTextFocus"
+        "command": "js-console.toast",
+        "key": "ctrl+3",
+        "mac": "ctrl+3",
+        "when": "isWindows || !isWindows"
       }
     ]
   },
