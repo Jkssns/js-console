@@ -69,6 +69,11 @@
           "type": "boolean",
           "default": true,
           "description": "启动时是否显示激励语(Show encourage message or not on startup)"
+        },
+        "js-console.LogMethod": {
+          "type": "string",
+          "default": "console.log",
+          "description": "其他语言的打印函数(Print functions in other languages)"
         }
       }
     },

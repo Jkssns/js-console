@@ -13,9 +13,10 @@ const jsonLog = vscode.commands.registerCommand('js-console.jsonLog', function (
 		const variablePilotSymbol = logOption.VariablePilotSymbol || ':::';
 		const quotationMark = logOption.QuotationMark === 'single' ? `'` : `"`;
 		const logEnd = logOption.ShowLogSemicolon ? ");" : ")";
+		const logFn = logOption.logMethod || 'console.log';
 
 		if (!word) {
-			const value = new vscode.SnippetString(`console.log(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify($1))${logEnd}`);
+			const value = new vscode.SnippetString(`${logFn}(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify($1))${logEnd}`);
 			editor.insertSnippet(value, varSelection.start);
 			return;
 		}
@@ -29,12 +30,12 @@ const jsonLog = vscode.commands.registerCommand('js-console.jsonLog', function (
 				if (lineStr) {
 					const isBegin = logOption.LineTagAtBeginOrEnd === 'begin';
 					if (isBegin) {
-						editBuilder.insert(insertSection.start, `console.log(${quotationMark + lineStr} ${word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word}))${logEnd}`);
+						editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + lineStr} ${word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word}))${logEnd}`);
 					} else {
-						editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word})), ${quotationMark + lineStr + quotationMark + logEnd}`);
+						editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word})), ${quotationMark + lineStr + quotationMark + logEnd}`);
 					}
 				} else {
-					editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word}))${logEnd}`);
+					editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + word + variablePilotSymbol} ${quotationMark}, JSON.parse(JSON.stringify(${word}))${logEnd}`);
 				}
 			});
 		})

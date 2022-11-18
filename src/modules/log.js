@@ -11,9 +11,10 @@ const log = vscode.commands.registerTextEditorCommand('js-console.qlog', functio
 		const variablePilotSymbol = logOption.VariablePilotSymbol || ':::';
 		const quotationMark = logOption.QuotationMark === 'single' ? `'` : `"`;
 		const logEnd = logOption.ShowLogSemicolon ? ");" : ")";
+		const logFn = logOption.logMethod || 'console.log';
 
 		if (!word) {
-			const value = new vscode.SnippetString(`console.log(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, $1${logEnd}`);
+			const value = new vscode.SnippetString(`${logFn}(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, $1${logEnd}`);
 			editor.insertSnippet(value, varSelection.start);
 			return;
 		}
@@ -27,12 +28,12 @@ const log = vscode.commands.registerTextEditorCommand('js-console.qlog', functio
 				if (lineStr) {
 					const isBegin = logOption.LineTagAtBeginOrEnd === 'begin';
 					if (isBegin) {
-						editBuilder.insert(insertSection.start, `console.log(${quotationMark + lineStr} ${word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
+						editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + lineStr} ${word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
 					} else {
-						editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word}, ${quotationMark + lineStr + quotationMark + logEnd}`);
+						editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word}, ${quotationMark + lineStr + quotationMark + logEnd}`);
 					}
 				} else {
-					editBuilder.insert(insertSection.start, `console.log(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
+					editBuilder.insert(insertSection.start, `${logFn}(${quotationMark + word + variablePilotSymbol} ${quotationMark}, ${word + logEnd}`);
 				}
 			});
 		})
