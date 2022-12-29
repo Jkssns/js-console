@@ -5,10 +5,8 @@
 	The function is fast `console.log()`, which saves the time of wrong or frequent logging.
 </p>
 <br>
-<br>
 
 ## 功能 Features
-<br>
 <br>
 
 ### 快捷键(Ctrl+1)
@@ -17,11 +15,11 @@
 	<br>
 	The function is shown in gif. Select a variable and press Ctrl+1 to quickly input a `console.log();`
 </p>
-<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-log.gif" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log.gif">
+<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-log.gif" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-log.gif">
 <br>
 <br>
 
-### 快捷键(Ctrl+2)
+### 快捷键(Ctrl+F1)
 <p style="font-size: 13px;">
 	问题：我们在控制台查看一个对象时，常因为用了框架，对象的属性被代理。在控制台中输出时，输出的是一个引用，对象的属性值都是...，需要点开才能真正输出这个值。还有Vue3，用了Proxy做代理后，每次都需要点击对象，点击target才能查看对应的值。
 	<br>
@@ -40,9 +38,26 @@
 	<br>
 	This shortcut function is the same as Ctrl+1, but the output is `console.log(JSON.parse(JSON.string(variable)));`</ span>
 	<br>
-	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/copylog.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/copylog.png">
+	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/copylog.png" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/copylog.png">
 </p>
 <br>
+
+### 快捷键(Ctrl+2)
+<p style="font-size: 13px;">
+	注释页面所有console
+	<br>
+	All consoles of note page
+	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/annotate_action.png" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/annotate_action.png">
+</p>
+<br>
+
+### 快捷键(Ctrl+F2)
+<p style="font-size: 13px;">
+	删除页面所有console
+	<br>
+	Delete all consoles on the page
+	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/del_action.png" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/del_action.png">
+</p>
 <br>
 
 ### 快捷键(Ctrl+3)
@@ -65,7 +80,7 @@
 | 启动时是否显示激励语 | Show encourage message or not on startup | `true` |
 <br>
 
-<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-console-setting.png" alt="Github上也有图片，链接是https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-console-setting.png">
+<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/js-console-setting.png" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/js-console-setting.png">
 <br>
 <br>
 

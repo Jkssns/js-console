@@ -2,7 +2,7 @@
   "name": "js-console",
   "displayName": "js console.log",
   "description": "快速极致的js log",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "Jkssns",
   "repository": "https://github.com/Jkssns/js-log",
   "issues": "https://github.com/Jkssns/js-log/issues",
@@ -17,7 +17,9 @@
     "onStartupFinished",
     "onCommand:js-console.qlog",
     "onCommand:js-console.jsonLog",
-    "onCommand:js-console.toast"
+    "onCommand:js-console.toast",
+    "onCommand:js-console.annotateAllLog",
+    "onCommand:js-console.removeAllLog"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -80,15 +82,23 @@
     "commands": [
       {
         "command": "js-console.qlog",
-        "title": "Log"
+        "title": "1.Log"
       },
       {
         "command": "js-console.jsonLog",
-        "title": "Log for JSON"
+        "title": "2.Log for JSON"
       },
       {
         "command": "js-console.toast",
         "title": "Message from js console.log"
+      },
+      {
+        "command": "js-console.annotateAllLog",
+        "title": "3.Annotate All Log"
+      },
+      {
+        "command": "js-console.removeAllLog",
+        "title": "Remove All Log"
       }
     ],
     "menus": {
@@ -102,6 +112,11 @@
             "when": "!editorReadonly",
             "command": "js-console.jsonLog",
             "group": "navigation"
+          },
+          {
+            "when": "!editorReadonly",
+            "command": "js-console.annotateAllLog",
+            "group": "navigation"
           }
       ]
     },
@@ -114,8 +129,20 @@
       },
       {
         "command": "js-console.jsonLog",
+        "key": "ctrl+f1",
+        "mac": "ctrl+f1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "js-console.annotateAllLog",
         "key": "ctrl+2",
         "mac": "ctrl+2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "js-console.removeAllLog",
+        "key": "ctrl+f2",
+        "mac": "ctrl+f2",
         "when": "editorTextFocus"
       },
       {
