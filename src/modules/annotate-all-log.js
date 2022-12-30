@@ -7,7 +7,7 @@ const annotateAllLog = vscode.commands.registerTextEditorCommand('js-console.ann
 
 	editor.edit(editBuilder => {
 		const end = new vscode.Position(vscode.window.activeTextEditor.document.lineCount + 1, 0);
-		editBuilder.replace(new vscode.Range(new vscode.Position(0, 0), end), documentText.replace(/console/gi, '// console'));
+		editBuilder.replace(new vscode.Range(new vscode.Position(0, 0), end), documentText.replace(/console/g, '// console'));
 	});
 });
 
