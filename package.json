@@ -2,7 +2,7 @@
   "name": "js-console",
   "displayName": "js console.log",
   "description": "快速极致的js log",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "Jkssns",
   "repository": "https://github.com/Jkssns/js-console",
   "issues": "https://github.com/Jkssns/js-console/issues",
@@ -123,32 +123,32 @@
     "keybindings": [
       {
         "command": "js-console.qlog",
-        "key": "ctrl+1",
-        "mac": "ctrl+1",
+        "key": "Ctrl+1",
+        "mac": "Cmd+1",
         "when": "editorTextFocus"
       },
       {
         "command": "js-console.jsonLog",
-        "key": "ctrl+f1",
-        "mac": "ctrl+f1",
+        "key": "Ctrl+f1",
+        "mac": "Cmd+f1",
         "when": "editorTextFocus"
       },
       {
         "command": "js-console.annotateAllLog",
-        "key": "ctrl+2",
-        "mac": "ctrl+2",
+        "key": "Ctrl+2",
+        "mac": "Cmd+2",
         "when": "editorTextFocus"
       },
       {
         "command": "js-console.removeAllLog",
-        "key": "ctrl+f2",
-        "mac": "ctrl+f2",
+        "key": "Ctrl+f2",
+        "mac": "Cmd+f2",
         "when": "editorTextFocus"
       },
       {
         "command": "js-console.toast",
-        "key": "ctrl+3",
-        "mac": "ctrl+3",
+        "key": "Ctrl+3",
+        "mac": "Cmd+3",
         "when": "isWindows || !isWindows"
       }
     ]
