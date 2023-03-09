@@ -4,8 +4,8 @@
   "description": "快速极致的js log",
   "version": "1.0.5",
   "publisher": "Jkssns",
-  "repository": "https://github.com/Jkssns/js-log",
-  "issues": "https://github.com/Jkssns/js-log/issues",
+  "repository": "https://github.com/Jkssns/js-console",
+  "issues": "https://github.com/Jkssns/js-console/issues",
   "icon": "logo.png",
   "engines": {
     "vscode": ">=1.2.0"
