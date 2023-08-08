@@ -11,8 +11,7 @@ const log = vscode.commands.registerTextEditorCommand('js-console.qlog', functio
 		const variablePilotSymbol = logOption.VariablePilotSymbol || ':::';
 		const quotationMark = logOption.QuotationMark === 'single' ? `'` : `"`;
 		const logEnd = logOption.ShowLogSemicolon ? ");" : ")";
-		const logFn = logOption.logMethod || 'console.log';
-
+		const logFn = logOption.LogMethod || 'console.log';
 		if (!word) {
 			const value = new vscode.SnippetString(`${logFn}(${quotationMark}$1${variablePilotSymbol} ${quotationMark}, $1${logEnd}`);
 			editor.insertSnippet(value, varSelection.start);
