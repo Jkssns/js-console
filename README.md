@@ -44,9 +44,6 @@
 
 ### 快捷键(Ctrl/Command+2) (Ctrl/Command+F2) (Ctrl/Command+F3)
 <p style="font-size: 13px;">
-	注释页面所有console
-	<br>
-	All consoles of note page
 	<img src="https://jkssns.oss-cn-hangzhou.aliyuncs.com/images/js-log/2-f2-f3.gif" alt="Github上图片地址：https://raw.githubusercontent.com/Jkssns/picture-bed/main/2-f2-f3.gif">
 </p>
 <br>
