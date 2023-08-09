@@ -1,6 +1,6 @@
 const vscode = require('vscode');
 const https = require('https');
-const logOption = vscode.workspace.getConfiguration('js-// console');
+const logOption = vscode.workspace.getConfiguration('js-console');
 const opn = require('opn');
 const suggestionUrl = 'https://static-mp-a268227e-62b2-4f41-9a02-f9379fb12ac8.next.bspapp.com';
 
