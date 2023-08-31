@@ -2,7 +2,7 @@
   "name": "js-console",
   "displayName": "js console.log",
   "description": "快速极致的js log",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "Jkssns",
   "repository": "https://github.com/Jkssns/js-console",
   "issues": "https://github.com/Jkssns/js-console/issues",
@@ -100,6 +100,15 @@
             "-a to A",
             "-a to _a"
           ]
+        },
+        "js-console.ShowEncourageMessageTimes": {
+          "type": "string",
+          "enum": [
+            "每次打开vscode/Every time vscode is started",
+            "一天一次/Once a day"
+          ],
+          "default": "一天一次/Once a day",
+          "description": "激励语显示频率(Frequency of occurrence)"
         }
       }
     },

@@ -17,9 +17,15 @@ const funPictures = require('./src/alt-keys/fun-pictures.js');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+	const lastDate = context.globalState.get('lastDate');
+	const today = new Date().toLocaleDateString();
+	const isSame = lastDate == today;
+	if (!isSame) {
+		context.globalState.update('lastDate', new Date().toLocaleDateString());
+	}
 	context.subscriptions.push(log);
 	context.subscriptions.push(jsonLog);
-	context.subscriptions.push(toast);
+	context.subscriptions.push(toast(isSame));
 	context.subscriptions.push(removeAllLog);
 	context.subscriptions.push(commentAllLog);
 	context.subscriptions.push(uncommentAllLog);

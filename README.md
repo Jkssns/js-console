@@ -69,7 +69,7 @@
 	<br>
 	<br>
 	选中变量，先按alt+1，再按alt+2，表示把大写转为下划线
-	先按alt+2，再按alt+3，表示把大写转为下划线
+	先按alt+2，再按alt+3，表示把下划线转为横线
 	可以相互转换
 	<br>
 	Select the variable and press alt+1 first, then alt+2 to convert uppercase to underline
