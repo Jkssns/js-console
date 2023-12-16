@@ -2,7 +2,7 @@
   "name": "js-console",
   "displayName": "js console.log",
   "description": "快速极致的js log",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "publisher": "Jkssns",
   "repository": "https://github.com/Jkssns/js-console",
   "issues": "https://github.com/Jkssns/js-console/issues",
@@ -152,42 +152,42 @@
       {
         "command": "js-console.formatStr1",
         "key": "Alt+1 Alt+2",
-        "mac": "Option+1 Option+2"
+        "mac": "Alt+1 Alt+2"
       },
       {
         "command": "js-console.formatStr2",
         "key": "Alt+1 Alt+3",
-        "mac": "Option+1 Option+3"
+        "mac": "Alt+1 Alt+3"
       },
       {
         "command": "js-console.formatStr3",
         "key": "Alt+2 Alt+1",
-        "mac": "Option+2 Option+1"
+        "mac": "Alt+2 Alt+1"
       },
       {
         "command": "js-console.formatStr4",
         "key": "Alt+2 Alt+3",
-        "mac": "Option+2 Option+3"
+        "mac": "Alt+2 Alt+3"
       },
       {
         "command": "js-console.formatStr5",
         "key": "Alt+3 Alt+1",
-        "mac": "Option+3 Option+1"
+        "mac": "Alt+3 Alt+1"
       },
       {
         "command": "js-console.formatStr6",
         "key": "Alt+3 Alt+2",
-        "mac": "Option+3 Option+2"
+        "mac": "Alt+3 Alt+2"
       },
       {
         "command": "js-console.formatStr7",
         "key": "Alt+4",
-        "mac": "Option+4"
+        "mac": "Alt+4"
       },
       {
         "command": "js-console.funPictures",
         "key": "Alt+c",
-        "mac": "Option+c"
+        "mac": "Alt+c"
       }
     ]
   },

@@ -28,7 +28,7 @@ const FunPictures = vscode.commands.registerCommand('js-console.funPictures', fu
 			</style>
 		</head>
 		<body>
-			<p id="tip" style="margin: 10px">Loading...</p>
+			<p id="tip" style="margin: 10px">Sorry, the service has been suspended.</p>
 			<img id='imgDom' draggable="false" src>
 		</body>
 		<script>
